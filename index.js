@@ -38,14 +38,16 @@ const setup = async () => {
   /**
    * Register platform
    */
-  /* await lti.registerPlatform({
-    url: 'http://localhost/moodle',
-    name: 'Platform',
-    clientId: 'CLIENTID',
-    authenticationEndpoint: 'http://localhost/moodle/mod/lti/auth.php',
-    accesstokenEndpoint: 'http://localhost/moodle/mod/lti/token.php',
-    authConfig: { method: 'JWK_SET', key: 'http://localhost/moodle/mod/lti/certs.php' }
-  }) */
+  // Canvas
+  //you may need to change the root uri from including test to whichever environment you are uploading to
+  await lti.registerPlatform({
+   url: 'https://fhict.test.instructure.com',
+   name: 'Platform',
+   clientId: 'CLIENTID',
+   authenticationEndpoint: 'https://fhict.test.instructure.com/api/lti/authorize_redirect',
+   accesstokenEndpoint: 'https://fhict.test.instructure.com/login/oauth2/token',
+   authConfig: { method: 'JWK_SET', key: 'https://fhict.test.instructure.com/api/lti/security/jwks' }
+ })
 }
 
 setup()

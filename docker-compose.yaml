@@ -16,4 +16,4 @@ services:
       dockerfile: ./Dockerfile
     restart: on-failure
     ports:
-      - 5000:3000
+      - 3000:3000
