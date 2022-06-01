@@ -1,0 +1,58 @@
+{
+  "title":"The Best Tool",
+  "description":"1.3 Test Tool used for documentation purposes.",
+  "oidc_initiation_url":"http://145.220.75.192:5050",
+  "target_link_uri":"http://145.220.75.192:5050",
+  "scopes":[
+    "https://purl.imsglobal.org/spec/lti-ags/scope/lineitem",
+    "https://purl.imsglobal.org/spec/lti-ags/scope/result.readonly"
+  ],
+  "extensions":[
+    {
+      "domain":"thebesttool.com",
+      "tool_id":"the-best-tool",
+      "platform":"canvas.instructure.com",
+      "privacy_level":"public",
+      "settings":{
+        "text":"Launch The Best Tool",
+        "icon_url":"https://some.icon.url/tool-level.png",
+        "selection_height": 800,
+        "selection_width": 800,
+        "placements":[
+          {
+            "text":"User Navigation Placement",
+            "icon_url":"https://some.icon.url/my_dashboard.png",
+            "placement":"user_navigation",
+            "message_type":"LtiResourceLinkRequest",
+            "target_link_uri":"https://your.target_link_uri/my_dashboard",
+            "canvas_icon_class":"icon-lti",
+            "custom_fields":{
+              "foo":"$Canvas.user.id"
+            }
+          },
+          {
+            "text":"Editor Button Placement",
+            "icon_url":"https://some.icon.url/editor_tool.png",
+            "placement":"editor_button",
+            "message_type":"LtiDeepLinkingRequest",
+            "target_link_uri":"https://your.target_link_uri/content_selector",
+            "selection_height": 500,
+            "selection_width": 500
+          }
+        ]
+      }
+    }
+  ],
+  "public_jwk":{
+    "kty":"RSA",
+    "alg":"RS256",
+    "e":"AQAB",
+    "kid":"8f796169-0ac4-48a3-a202-fa4f3d814fcd",
+    "n":"nZD7QWmIwj-3N_RZ1qJjX6CdibU87y2l02yMay4KunambalP9g0fU9yZLwLX9WYJINcXZDUf6QeZ-SSbblET-h8Q4OvfSQ7iuu0WqcvBGy8M0qoZ7I-NiChw8dyybMJHgpiP_AyxpCQnp3bQ6829kb3fopbb4cAkOilwVRBYPhRLboXma0cwcllJHPLvMp1oGa7Ad8osmmJhXhM9qdFFASg_OCQdPnYVzp8gOFeOGwlXfSFEgt5vgeU25E-ycUOREcnP7BnMUk7wpwYqlE537LWGOV5z_1Dqcqc9LmN-z4HmNV7b23QZW4_mzKIOY4IqjmnUGgLU9ycFj5YGDCts7Q",
+    "use":"sig"
+  },
+  "custom_fields":{
+    "bar":"$Canvas.user.sisid"
+  }
+
+}
